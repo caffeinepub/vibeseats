@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 0.13 0.02 265;
+    --foreground: 0.97 0.005 260;
+    --card: 0.18 0.025 265;
+    --card-foreground: 0.97 0.005 260;
+    --popover: 0.18 0.025 265;
+    --popover-foreground: 0.97 0.005 260;
+    --primary: 0.55 0.22 290;
+    --primary-foreground: 0.97 0 0;
+    --secondary: 0.2 0.025 265;
+    --secondary-foreground: 0.97 0.005 260;
+    --muted: 0.22 0.025 265;
+    --muted-foreground: 0.62 0.01 260;
+    --accent: 0.45 0.2 290;
+    --accent-foreground: 0.97 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.97 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 10%;
+    --ring: 0.55 0.22 290;
+    --chart-1: 0.55 0.22 290;
+    --chart-2: 0.65 0.17 295;
+    --chart-3: 0.45 0.18 285;
+    --chart-4: 0.7 0.14 285;
+    --chart-5: 0.4 0.22 295;
+    --sidebar: 0.17 0.025 265;
+    --sidebar-foreground: 0.97 0.005 260;
+    --sidebar-primary: 0.55 0.22 290;
+    --sidebar-primary-foreground: 0.97 0 0;
+    --sidebar-accent: 0.22 0.025 265;
+    --sidebar-accent-foreground: 0.97 0.005 260;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.55 0.22 290;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "GeneralSans", "Satoshi", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.16 0.02 265);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.3 0.06 290);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.45 0.15 290);
+}
